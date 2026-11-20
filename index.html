@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SAVAS Art House | Artists. Exhibitions. Collectors.</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="SAVAS Art House is an independent international art platform in Miami connecting artists, collectors and communities.">
+<link rel="icon" type="image/png" href="img/savas-01.png"><link rel="apple-touch-icon" href="img/savas-01.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Hanken+Grotesk:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#faf8f4;--ink:#141414;--mute:#5d5b57;--soft:#f3f1ed;--line:#dcd8d0;--gold:#9a7b34;--black:#000;--onblack:#f4f1ea;--ph:#e7e3db;
+--serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;--sans:"Hanken Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b0b0b;--ink:#ece9e2;--mute:#a09c93;--soft:#151514;--line:#2c2b29;--gold:#c2a15a;--ph:#1e1d1b}}
+:root[data-theme="dark"]{--bg:#0b0b0b;--ink:#ece9e2;--mute:#a09c93;--soft:#151514;--line:#2c2b29;--gold:#c2a15a;--ph:#1e1d1b}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 var(--sans)}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.08;margin:0}
+h2{font-size:clamp(2rem,4vw,3.1rem);margin-bottom:1.2rem}
+h3{font-size:1.7rem}
+p{max-width:60ch;margin:0 0 1rem;color:var(--mute)}
+header{position:absolute;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:5;color:var(--onblack)}
+header .wrap{display:flex;flex-direction:column;justify-content:center;align-items:center;padding-top:22px;padding-bottom:22px;gap:6px}
+.logo{display:block;line-height:0}
+.logo img{height:160px;width:auto;display:block}
+nav{display:flex;gap:26px;flex-wrap:wrap;justify-content:center}
+nav a{font-size:.9rem;text-decoration:none;opacity:.85}
+nav a:hover{opacity:1;color:var(--gold)}
+.hero{background:var(--black);color:var(--onblack);padding:310px 0 90px}
+.hero h1{font-size:clamp(2.5rem,5.8vw,4.9rem);max-width:13ch;font-weight:400;line-height:1.1}
+.hero p{color:#bdb8ad;font-size:1.15rem;margin-top:1.6rem}
+.hero-grid{display:grid;grid-template-columns:1fr;gap:60px;align-items:end}
+.frames{display:flex;gap:16px;align-items:flex-end}
+.frame{background:#1b1a18;border:1px solid #2e2c28;display:flex;align-items:flex-end;padding:12px;font-size:.72rem;color:#8a857a;line-height:1.3}
+.f1{flex:3;aspect-ratio:3/4}.f2{flex:2;aspect-ratio:1/1}
+.cta{display:inline-block;margin-top:1.4rem;padding:14px 28px;border:1px solid var(--gold);color:var(--onblack);text-decoration:none;font-size:.95rem;background:none;font-family:var(--sans);cursor:pointer}
+.cta:hover{background:var(--gold);color:#000}
+section{padding:110px 0}
+.tag{color:var(--gold);font-size:.95rem;margin-bottom:.8rem;display:block}
+.artists{display:grid;grid-template-columns:repeat(5,1fr);gap:32px 28px;margin-top:2.5rem}
+.artist h3{font-size:1.45rem;margin-bottom:.5rem}.artist p{font-size:.95rem}
+.ph{background:var(--ph);border:1px dashed var(--line);display:flex;align-items:center;justify-content:center;text-align:center;padding:16px;color:var(--mute);font-size:.8rem}
+.artist .ph{aspect-ratio:480/562;margin-bottom:1.3rem}
+.portrait{display:block;width:100%;height:auto;margin-bottom:1.3rem}
+.artist a.lnk,.work a{color:var(--ink)}
+.works{display:grid;grid-template-columns:repeat(3,1fr);gap:40px 28px;margin-top:2.5rem}
+.work .ph{margin-bottom:.9rem}
+.pworks{column-count:4;column-gap:32px;margin-top:2.5rem}.pworks .work{break-inside:avoid;margin-bottom:44px}.hgrid{display:grid;grid-template-columns:repeat(5,1fr);gap:36px 22px;margin-top:2.5rem;align-items:end}.hgrid img{display:block;width:100%;height:auto;margin-bottom:.8rem}.hgrid .work{align-self:start}.hgrid h3{font-size:1.15rem}.hgrid p{font-size:.82rem}.pworks img{display:block;width:100%;height:auto;margin-bottom:.9rem}.pworks h3{font-size:1.15rem}.pworks p{font-size:.82rem}
+.work:nth-child(1) .ph{aspect-ratio:4/5}.work:nth-child(2) .ph{aspect-ratio:1/1}.work:nth-child(3) .ph{aspect-ratio:3/4}
+.work h3{font-size:1.35rem}
+.work p{font-size:.88rem;margin:.2rem 0 .6rem}
+.btn{font:500 .9rem var(--sans);padding:10px 18px;border:1px solid var(--ink);background:none;color:var(--ink);cursor:pointer}
+.btn:hover{background:var(--ink);color:var(--bg)}
+.alt{background:var(--soft)}
+.artist a.lnk{display:inline-block;margin:0 18px 6px 0;font-size:.95rem}
+
+.bio{padding:96px 0}.dark.bio p{color:#e6e2da}.bio h2{color:var(--onblack)}
+.wall{position:relative;padding:96px 0 100px;background:#faf8f4;color:#141414;--bg:#faf8f4;--ink:#141414;--mute:#5d5b57;--line:#dcd8d0}
+.wall .pworks img.cut{box-shadow:none;filter:drop-shadow(6px 14px 12px rgba(60,48,36,.28))}
+.scaled{--k:6.2px;display:flex;flex-wrap:wrap;gap:56px 40px;align-items:flex-start;margin-top:2.5rem}
+.scaled .work{width:max(calc(var(--k)*var(--w)),150px)}
+.scaled img{display:block;width:calc(var(--k)*var(--w));max-width:none;height:auto;margin-bottom:.9rem}
+.scaled h3{font-size:1.15rem}.scaled p{font-size:.82rem}
+.wall .scaled img{box-shadow:0 0 0 1px rgba(0,0,0,.09)}
+.wall .scaled img.cut{box-shadow:none;filter:none}
+.wall::after{content:"";position:absolute;left:0;right:0;bottom:0;display:none}
+.wall .hgrid img,.wall .pworks img{box-shadow:0 1px 2px rgba(40,30,20,.25),6px 14px 22px rgba(60,48,36,.22)}
+.exh{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.exh .ph{aspect-ratio:16/10}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:2.5rem;border-top:1px solid var(--line)}
+.services div{padding:28px 28px 28px 0}
+.services div+div{padding-left:28px;border-left:1px solid var(--line)}
+.dark{background:var(--black);color:var(--onblack)}
+.dark p{color:#bdb8ad}
+form{display:grid;gap:18px;max-width:640px;margin-top:2rem}
+label{font-size:.9rem;color:#bdb8ad;display:grid;gap:6px}
+input,select,textarea{font:inherit;background:transparent;color:var(--onblack);border:0;border-bottom:1px solid #4a473f;padding:10px 2px;border-radius:0}
+select option{color:#000}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold)}
+.direct{margin-top:2.2rem;line-height:2}.direct a{color:var(--onblack);text-decoration-color:var(--gold);text-underline-offset:4px}.direct a:hover{color:var(--gold)}
+#msg{color:var(--gold);min-height:1.5em;margin:0}
+footer{background:var(--black);color:#8a857a;padding:28px 0;font-size:.85rem;border-top:1px solid #1f1e1b}
+footer .wrap{display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px}
+footer img{height:64px;width:auto}
+@media (max-width:1000px){.scaled{--k:4.6px}.hgrid{grid-template-columns:repeat(3,1fr)}.artists{grid-template-columns:1fr 1fr}.pworks{column-count:2}}
+@media (max-width:820px){.scaled{--k:3.6px;gap:44px 28px}.pworks{column-count:1}.hgrid{grid-template-columns:1fr 1fr}.artist{max-width:340px}.logo img{height:116px}.hero-grid,.artists,.exh,.services,.works{grid-template-columns:1fr}
+.services div+div{padding-left:0;border-left:0;border-top:1px solid var(--line)}
+header .wrap{gap:10px}nav{justify-content:center;gap:10px 18px}
+.hero{padding-top:330px}section{padding:76px 0}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+#works{display:none}
+body[data-view]:not([data-view="home"]) .bio{padding-top:300px}
+.bio-grid{display:grid;grid-template-columns:minmax(220px,320px) 1fr;gap:56px;align-items:start}
+.bio-grid .portrait,.bio-grid .ph{margin:0;width:100%;height:auto}
+.bio-grid .ph{aspect-ratio:480/562;background:#1b1a18;border:1px solid #2e2c28;color:#8a857a}
+.back{display:inline-block;margin-bottom:1.6rem;color:var(--gold);text-decoration:none;font-size:.95rem}
+.back:hover{text-decoration:underline}
+.artist h3 a{color:inherit;text-decoration:none}.artist h3 a:hover{color:var(--gold)}.artist .portrait{cursor:pointer}
+@media (max-width:820px){.bio-grid{grid-template-columns:1fr;gap:32px}.bio-grid>div:first-child{max-width:300px}}
+.vgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:48px 32px;margin-top:2rem;align-items:start}.vgrid img{display:block;width:100%;height:auto;margin-bottom:.9rem;box-shadow:0 0 0 1px rgba(0,0,0,.09)}.vgrid h3{font-size:1.15rem}.vgrid p{font-size:.82rem}
+@media (max-width:820px){.vgrid{grid-template-columns:1fr 1fr;gap:32px 18px}}
+.exgal{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:2rem 0 1.4rem}
+.exgal img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;margin:0}
+.exgal img:first-child{grid-column:span 2;grid-row:span 2;aspect-ratio:auto;height:100%}
+.exnext{border-top:1px solid var(--line);margin-top:3rem;padding-top:2rem;max-width:760px}
+@media (max-width:820px){.exgal{grid-template-columns:1fr 1fr}.exgal img:first-child{grid-column:span 2;grid-row:auto;aspect-ratio:4/3;height:auto}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<a class="logo" href="#top" aria-label="SAVAS Art House home"><img src="img/savas-02.png" alt="SAVAS Art House" width="680" height="372"></a>
+<nav aria-label="Main"><a href="#artists">Artists</a><a href="#exhibitions">Exhibitions</a><a href="#advisory">Art Advisory</a><a href="#staging">Property Staging</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+</div></header>
+
+<main id="top">
+<div class="hero"><div class="wrap hero-grid">
+<div>
+<h1>Art Beyond Conventional Spaces</h1>
+<p>SAVAS Art House is an independent international art platform connecting artists, collectors and communities through curated exhibitions, art acquisitions and creative collaborations.</p>
+<a class="cta" href="#artists">Meet the artists</a>
+</div>
+</div></div>
+
+<section id="artists"><div class="wrap">
+<span class="tag">Artists. Exhibitions. Collectors.</span>
+<h2>Represented and collaborating artists</h2>
+<p>Additional artists will be added as their participation and representation arrangements are confirmed.</p>
+<div class="artists">
+<article class="artist"><img class="portrait" src="img/savas-03.jpg" alt="Portrait of Vilmantas Marcinkevičius in his studio (temporary)" width="700" height="820">
+<h3>Vilmantas Marcinkevičius</h3>
+<p>Internationally recognized Lithuanian painter whose expressive figurative works have been exhibited internationally.</p>
+<a class="lnk" href="#vilmantas">Biography</a><a class="lnk" href="#vilmantas-works">Selected works</a></article>
+<article class="artist"><img class="portrait" src="img/savas-04.jpg" alt="Portrait of Indra Marcinkevičienė" width="620" height="726">
+<h3>Indra Marcinkevičienė</h3>
+<p>Lithuanian artist and designer creating distinctive contemporary artworks and sculptural compositions with strong architectural and interior design applications.</p>
+<a class="lnk" href="#indra">Biography</a><a class="lnk" href="#indra-works">Selected works</a></article>
+<article class="artist"><img class="portrait" src="img/savas-05.jpg" alt="Portrait of Patrice Bertin" width="480" height="562">
+<h3>Patrice Bertin</h3>
+<p>Contemporary painting, color, texture and optical compositions.</p>
+<a class="lnk" href="#patrice">Biography</a><a class="lnk" href="#patrice-works">Selected works</a></article>
+<article class="artist"><img class="portrait" src="img/savas-06.jpg" alt="Portrait of Hal Trager" width="720" height="960">
+<h3>Hal Trager</h3>
+<p>Geometric abstraction and optical art.</p>
+<a class="lnk" href="#hal">Biography</a><a class="lnk" href="#hal-works">Selected works</a></article>
+<article class="artist"><img class="portrait" src="img/savas-46.jpg" alt="Portrait of Natalia Jona" width="720" height="843">
+<h3>Natalia Jona</h3>
+<p>Abstract painting in ink and paint on linen: the human body, landscape and literature, in hypnotic, repetitive pen strokes.</p>
+<a class="lnk" href="#natalia">Biography</a><a class="lnk" href="#natalia-works">Selected works</a></article>
+<article class="artist"><img class="portrait" src="img/savas-79.jpg" alt="Portrait of Juan Fernando Cobo Agudelo" width="720" height="843">
+<h3>Juan Fernando Cobo Agudelo</h3>
+<p>Colombian painter and sculptor moving between the figurative and the abstract, in oil, acrylic and pastel.</p>
+<a class="lnk" href="#juan">Biography</a><a class="lnk" href="#juan-works">Selected works</a></article>
+<article class="artist"><img class="portrait" src="img/savas-78.jpg" alt="Portrait of Santiago Betancur" width="720" height="843">
+<h3>Santiago Betancur</h3>
+<p>Miami-based Colombian painter of the horse and the human figure, in a Neo-Renaissance style.</p>
+<a class="lnk" href="#santiago">Biography</a><a class="lnk" href="#santiago-works">Selected works</a></article>
+</div></div></section>
+
+<section id="works" class="wall"><div class="wrap">
+<h2>Selected works</h2>
+<p>Every work carries an inquiry option. Prices are shared privately.</p>
+<div class="works">
+<article class="work"><div class="ph">Placeholder image</div><h3>Artwork title</h3><p>Medium, dimensions to be supplied<br>Price Upon Request</p><button class="btn" data-art="Vilmantas Marcinkevičius, Artwork title (placeholder 1)">Inquire about this work</button></article>
+<article class="work"><div class="ph">Placeholder image</div><h3>Artwork title</h3><p>Medium, dimensions to be supplied<br>Price Upon Request</p><button class="btn" data-art="Indra Marcinkevičienė, Artwork title (placeholder 2)">Inquire about this work</button></article>
+<article class="work"><div class="ph">Placeholder image</div><h3>Artwork title</h3><p>Medium, dimensions to be supplied<br>Price Upon Request</p><button class="btn" data-art="Artwork title (placeholder 3)">Inquire about this work</button></article>
+</div></div></section>
+
+<section id="vilmantas" class="dark bio"><div class="wrap"><h2>Vilmantas Marcinkevičius</h2><p>Vilmantas Marcinkevičius is one of the most prominent contemporary neo-expressionist painters in Northern Europe. His painting <em>Tired Man</em> is part of the European Parliament’s art collection, acquired in 2008, and his work is also held by the MO Museum and the Lithuanian National Museum of Art, the TAAD Foundation and a museum collection in Hiroshima, Japan. He painted portraits for the Danish royal family. Viborg, Denmark, named him Artist of the Year in 2000. He has held 30 solo exhibitions across Lithuania, Denmark, France, Sweden and the Faroe Islands. For nearly two decades he has worked with Galleri NB, one of Denmark’s strongest galleries, and in 2021 his paintings were presented in the United Arab Emirates and South Africa.</p><p>As co-founder of the Young Painter Prize, he helps choose winners whose work enters Lithuania’s national museum collection. The prize now brings finalists together in international exhibitions. In 2026 the Museo Civico Pietro Cavoti in Galatina, Italy, presented <em>First, We Bite: Icons, Offerings and the Feminine in Ritual</em>, his joint exhibition with Indra Marcinkevičienė, curated by Neringa J. Miller. He divides his time between Lithuania and Galatina, in southern Italy.</p><p>His work is now introduced to American collectors through SAVAS Art House.</p></div></section>
+<section id="vilmantas-works" class="wall"><div class="wrap"><h3 style="margin-bottom:1rem">Selected works</h3><div class="vgrid"><article class="work"><img src="img/savas-07.jpg" alt="Painting by Vilmantas Marcinkevičius, work 1" width="730" height="1000" loading="lazy"><h3>Title to be confirmed</h3><p>Medium and dimensions to be confirmed<br>Price Upon Request</p><button class="btn" data-art="Vilmantas Marcinkevičius, work 1 (title to be confirmed)">Inquire</button></article>
+<article class="work"><img src="img/savas-08.jpg" alt="Painting by Vilmantas Marcinkevičius, work 2" width="831" height="1000" loading="lazy"><h3>Title to be confirmed</h3><p>Medium and dimensions to be confirmed<br>Price Upon Request</p><button class="btn" data-art="Vilmantas Marcinkevičius, work 2 (title to be confirmed)">Inquire</button></article>
+<article class="work"><img src="img/savas-09.jpg" alt="Painting by Vilmantas Marcinkevičius, work 3" width="782" height="1000" loading="lazy"><h3>Title to be confirmed</h3><p>Medium and dimensions to be confirmed<br>Price Upon Request</p><button class="btn" data-art="Vilmantas Marcinkevičius, work 3 (title to be confirmed)">Inquire</button></article>
+<article class="work"><img src="img/savas-10.jpg" alt="Painting by Vilmantas Marcinkevičius, work 4" width="1000" height="837" loading="lazy"><h3>Title to be confirmed</h3><p>Medium and dimensions to be confirmed<br>Price Upon Request</p><button class="btn" data-art="Vilmantas Marcinkevičius, work 4 (title to be confirmed)">Inquire</button></article>
+<article class="work"><img src="img/savas-11.jpg" alt="Painting by Vilmantas Marcinkevičius, work 5" width="591" height="1000" loading="lazy"><h3>Title to be confirmed</h3><p>Medium and dimensions to be confirmed<br>Price Upon Request</p><button class="btn" data-art="Vilmantas Marcinkevičius, work 5 (title to be confirmed)">Inquire</button></article>
+<article class="work"><img src="img/savas-12.jpg" alt="Painting by Vilmantas Marcinkevičius, work 6" width="799" height="1000" loading="lazy"><h3>Title to be confirmed</h3><p>Medium and dimensions to be confirmed<br>Price Upon Request</p><button class="btn" data-art="Vilmantas Marcinkevičius, work 6 (title to be confirmed)">Inquire</button></article>
+<article class="work"><img src="img/savas-13.jpg" alt="Painting by Vilmantas Marcinkevičius, work 7" width="713" height="1000" loading="lazy"><h3>Title to be confirmed</h3><p>Medium and dimensions to be confirmed<br>Price Upon Request</p><button class="btn" data-art="Vilmantas Marcinkevičius, work 7 (title to be confirmed)">Inquire</button></article>
+<article class="work"><img src="img/savas-14.jpg" alt="Painting by Vilmantas Marcinkevičius, work 8" width="804" height="1000" loading="lazy"><h3>Title to be confirmed</h3><p>Medium and dimensions to be confirmed<br>Price Upon Request</p><button class="btn" data-art="Vilmantas Marcinkevičius, work 8 (title to be confirmed)">Inquire</button></article>
+<article class="work"><img src="img/savas-15.jpg" alt="Painting by Vilmantas Marcinkevičius, work 9" width="776" height="964" loading="lazy"><h3>Title to be confirmed</h3><p>Medium and dimensions to be confirmed<br>Price Upon Request</p><button class="btn" data-art="Vilmantas Marcinkevičius, work 9 (title to be confirmed)">Inquire</button></article></div></div></section>
+
+<section id="indra" class="dark bio"><div class="wrap"><h2>Indra Marcinkevičienė</h2><p>Indra Marcinkevičienė is a Lithuanian artist whose work explores the emotional world of women, war and life under political oppression, in pieces that range from Madonnas to ironic, banana-like fountain sculptures. She is also known for her interior design objects and for her command of colour. Her design piece <em>Happy Boomerang</em> was presented at the Collect 2015 craft fair at London’s Saatchi Gallery. In 2024 her work was shown in France in <em>Dévotions privées</em> in Metz, <em>Crescendo. Lituanie</em> at the Grand Théâtre de Provence in Aix-en-Provence, and <em>Gentle Resistance</em> with the photographer Antanas Sutkus in Bourganeuf, as well as at the Art Vilnius’24 contemporary art fair in Lithuania. A design she co-created received Lithuania’s Good Design prize in 2012. In 2026 the Museo Civico Pietro Cavoti in Galatina, Italy, presented <em>First, We Bite: Icons, Offerings and the Feminine in Ritual</em>, her joint exhibition with Vilmantas Marcinkevičius, curated by Neringa J. Miller. She divides her time between Lithuania and Galatina, in southern Italy.</p><p>Her work is now introduced to American collectors through SAVAS Art House.</p></div></section>
+<section id="indra-works" class="wall"><div class="wrap"><h3 style="margin-bottom:1rem">Selected works</h3><div class="vgrid"><article class="work"><img src="img/savas-16.jpg" alt="Textile wall work by Indra Marcinkevičienė, work 1" width="638" height="1000" loading="lazy"><h3>Title to be confirmed</h3><p>Textile; dimensions to be confirmed<br>Price Upon Request</p><button class="btn" data-art="Indra Marcinkevičienė, work 1 (title to be confirmed)">Inquire</button></article>
+<article class="work"><img src="img/savas-17.jpg" alt="Textile wall work by Indra Marcinkevičienė, work 2" width="642" height="1000" loading="lazy"><h3>Title to be confirmed</h3><p>Textile; dimensions to be confirmed<br>Price Upon Request</p><button class="btn" data-art="Indra Marcinkevičienė, work 2 (title to be confirmed)">Inquire</button></article>
+<article class="work"><img src="img/savas-18.jpg" alt="Close-up detail of a textile wall work by Indra Marcinkevičienė" width="800" height="1000" loading="lazy"><h3>Detail</h3><p>Close-up of work 1, showing the sewn textile forms</p></article></div></div></section>
+
+<section id="patrice" class="dark bio"><div class="wrap"><h2>Patrice Bertin</h2><p>Born in France, Patrice Bertin trained at the Académie Charpentier and the École Nationale Supérieure des Arts Décoratifs (ENSAD).</p><p>He began his career in the conservation and restoration of art. In the 1970s he brought his private conservation practice to New York, where he worked extensively with Old Master, Impressionist and contemporary paintings, including important works associated with Galerie Wildenstein and distinguished private collections.</p><p>Years of studying paintings through the eyes of a conservator shaped his own artistic language. His intimate knowledge of pigment, surface, light and structure became the foundation for his painting, as he moved from preserving the vision of others to expressing his own.</p><p>Bertin’s paintings explore the tension between color and form, movement and stillness, intuition and structure. Geometric compositions of vertical and horizontal elements create a delicate equilibrium, in which color becomes a means of emotion, rhythm and discovery.</p><p>His work is presented to collectors through SAVAS Art House.</p></div></section>
+<section id="patrice-works" class="wall"><div class="wrap"><h3 style="margin-bottom:1rem">Selected works</h3><div class="scaled"><article class="work" style="--w:72"><img src="img/savas-19.jpg" alt="Patrice Bertin, A Place Beyond Time" width="812" height="809" loading="lazy"><h3>A Place Beyond Time</h3><p>Oil on canvas<br>72 × 72 in<br>$17,000</p><button class="btn" data-art="Patrice Bertin, A Place Beyond Time">Inquire</button></article>
+<article class="work" style="--w:48"><img src="img/savas-21.jpg" alt="Patrice Bertin, A Glimpse of Elsewhere" width="734" height="764" loading="lazy"><h3>A Glimpse of Elsewhere</h3><p>Oil on canvas<br>48 × 48 in<br>$14,000</p><button class="btn" data-art="Patrice Bertin, A Glimpse of Elsewhere">Inquire</button></article>
+<article class="work" style="--w:58"><img class="cut" src="img/savas-30.png" alt="Patrice Bertin, To the Point" width="800" height="800" loading="lazy"><h3>To the Point</h3><p>Oil on canvas<br>58 × 58 in<br>$16,000</p><button class="btn" data-art="Patrice Bertin, To the Point">Inquire</button></article>
+<article class="work" style="--w:54"><img src="img/savas-20.jpg" alt="Patrice Bertin, The Heart of Geometry" width="774" height="769" loading="lazy"><h3>The Heart of Geometry</h3><p>Oil on canvas<br>54 × 54 in<br>$12,000</p><button class="btn" data-art="Patrice Bertin, The Heart of Geometry">Inquire</button></article>
+<article class="work" style="--w:23"><img class="cut" src="img/savas-29.png" alt="Patrice Bertin, A Little Elsewhere" width="398" height="302" loading="lazy"><h3>A Little Elsewhere</h3><p>Oil on canvas<br>17½ × 23 in<br>$7,700</p><button class="btn" data-art="Patrice Bertin, A Little Elsewhere">Inquire</button></article>
+<article class="work" style="--w:37"><img class="cut" src="img/savas-28.png" alt="Patrice Bertin, Through Space" width="682" height="771" loading="lazy"><h3>Through Space</h3><p>Oil on canvas<br>43 × 37 in<br>$11,000</p><button class="btn" data-art="Patrice Bertin, Through Space">Inquire</button></article>
+<article class="work" style="--w:12.5"><img src="img/savas-25.jpg" alt="Patrice Bertin, The Colourful River of Life" width="166" height="1102" loading="lazy"><h3>The Colourful River of Life</h3><p>Oil on canvas<br>96 × 12½ in<br>$5,500</p><button class="btn" data-art="Patrice Bertin, The Colourful River of Life">Inquire</button></article>
+<article class="work" style="--w:12.5"><img src="img/savas-26.jpg" alt="Patrice Bertin, The River of Life" width="167" height="1102" loading="lazy"><h3>The River of Life</h3><p>Oil on canvas<br>96 × 12½ in<br>$5,500</p><button class="btn" data-art="Patrice Bertin, The River of Life">Inquire</button></article>
+<article class="work" style="--w:48"><img src="img/savas-31.jpg" alt="Patrice Bertin, The Saddle" width="900" height="895" loading="lazy"><h3>The Saddle</h3><p>Oil on canvas<br>48 × 48 in<br>$16,000</p><button class="btn" data-art="Patrice Bertin, The Saddle">Inquire</button></article>
+<article class="work" style="--w:48"><img src="img/savas-24.jpg" alt="Patrice Bertin, The Gateway" width="763" height="938" loading="lazy"><h3>The Gateway</h3><p>Oil on canvas<br>48 × 60 in<br>$14,000</p><button class="btn" data-art="Patrice Bertin, The Gateway">Inquire</button></article>
+<article class="work" style="--w:62"><img src="img/savas-32.jpg" alt="Patrice Bertin, Beyond the Ordinary" width="461" height="455" loading="lazy"><h3>Beyond the Ordinary</h3><p>Oil on canvas<br>62 × 62 in<br>$14,000</p><button class="btn" data-art="Patrice Bertin, Beyond the Ordinary">Inquire</button></article>
+<article class="work" style="--w:34"><img class="cut" src="img/savas-33.png" alt="Patrice Bertin, Paris Composition 1961" width="290" height="393" loading="lazy"><h3>Paris Composition 1961</h3><p>Oil on canvas<br>52 × 34 in<br>Louis XVI-style gilded frame<br>$14,500</p><button class="btn" data-art="Patrice Bertin, Paris Composition 1961">Inquire</button></article>
+<article class="work" style="--w:12.5"><img src="img/savas-34.jpg" alt="Patrice Bertin, Colourful Moments" width="90" height="448" loading="lazy"><h3>Colourful Moments</h3><p>Oil on canvas<br>84 × 12½ in<br>$7,700</p><button class="btn" data-art="Patrice Bertin, Colourful Moments">Inquire</button></article>
+<article class="work" style="--w:20"><img src="img/savas-35.jpg" alt="Patrice Bertin, Standing Tall" width="127" height="436" loading="lazy"><h3>Standing Tall</h3><p>Oil on canvas<br>60 × 20 in<br>$5,500</p><button class="btn" data-art="Patrice Bertin, Standing Tall">Inquire</button></article>
+<article class="work" style="--w:48"><img src="img/savas-22.jpg" alt="Patrice Bertin, Selected artwork 04" width="775" height="767" loading="lazy"><h3>Selected artwork 04</h3><p>Oil on canvas<br>48 × 48 in<br>Price Upon Request</p><button class="btn" data-art="Patrice Bertin, Selected artwork 04 (PB04)">Inquire</button></article>
+<article class="work" style="--w:36"><img src="img/savas-23.jpg" alt="Patrice Bertin, Selected artwork 05" width="743" height="976" loading="lazy"><h3>Selected artwork 05</h3><p>Oil on canvas<br>36 × 48 in<br>Price Upon Request</p><button class="btn" data-art="Patrice Bertin, Selected artwork 05 (PB05)">Inquire</button></article>
+<article class="work" style="--w:36"><img src="img/savas-27.jpg" alt="Patrice Bertin, Selected artwork 08" width="691" height="1066" loading="lazy"><h3>Selected artwork 08</h3><p>Oil on canvas<br>36 × 60 in<br>Price Upon Request</p><button class="btn" data-art="Patrice Bertin, Selected artwork 08 (PB08)">Inquire</button></article></div></div></section>
+
+<section id="hal" class="dark bio"><div class="wrap"><h2>Hal Trager</h2><p>Born in the Bronx and raised on Long Island, Hal Trager has built his art on seeing the world differently.</p><p>At two years old, an accident left him with only 35% of the vision in his left eye. For years he believed he saw the world as everyone else did. At nine, sitting with his father in New York City, he began to understand how different his perspective was. Asked to consider the form of a skyscraper, he saw more than a flat surface. He saw depth, dimension and movement. He picked up a pencil and drew what he saw, beginning a lifelong exploration of perspective and perception.</p><p>Today Trager works primarily with plastic matte film, creating intricate hand-drawn compositions that challenge the eye and invite the viewer to experience reality from another perspective. His work embodies the essence of Op Art: transforming the ordinary into the extraordinary and making the unseen seen.</p><p>His work is presented to collectors through SAVAS Art House.</p></div></section>
+<section id="hal-works" class="wall"><div class="wrap"><h3 style="margin-bottom:1rem">Selected works</h3><p>Framed dimensions, height × width.</p><div class="scaled"><article class="work" style="--w:22"><img src="img/savas-36.jpg" alt="Hal Trager, Timothy Leary’s Dream" width="900" height="1162" loading="lazy"><h3>Timothy Leary’s Dream</h3><p>Plastic Matte Film<br>27 × 22 in<br>$3,500</p><button class="btn" data-art="Hal Trager, Timothy Leary’s Dream (HT02)">Inquire</button></article>
+<article class="work" style="--w:22"><img src="img/savas-37.jpg" alt="Hal Trager, Turbines" width="900" height="1151" loading="lazy"><h3>Turbines</h3><p>Plastic Matte Film<br>27 × 22 in<br>$3,500</p><button class="btn" data-art="Hal Trager, Turbines (HT01)">Inquire</button></article>
+<article class="work" style="--w:22"><img src="img/savas-38.jpg" alt="Hal Trager, House of Insanity" width="900" height="1102" loading="lazy"><h3>House of Insanity</h3><p>Plastic Matte Film<br>27 × 22 in<br>$3,500</p><button class="btn" data-art="Hal Trager, House of Insanity (HT03)">Inquire</button></article>
+<article class="work" style="--w:22"><img src="img/savas-39.jpg" alt="Hal Trager, AYOTL" width="900" height="1152" loading="lazy"><h3>AYOTL</h3><p>Plastic Matte Film<br>27 × 22 in<br>$3,500</p><button class="btn" data-art="Hal Trager, AYOTL (HT05)">Inquire</button></article>
+<article class="work" style="--w:22"><img src="img/savas-40.jpg" alt="Hal Trager, Bat House" width="900" height="1149" loading="lazy"><h3>Bat House</h3><p>Plastic Matte Film<br>27 × 22 in<br>$3,500</p><button class="btn" data-art="Hal Trager, Bat House (HT04)">Inquire</button></article>
+<article class="work" style="--w:27"><img src="img/savas-41.jpg" alt="Hal Trager, Geo Lilies #1" width="900" height="818" loading="lazy"><h3>Geo Lilies #1</h3><p>Plastic Matte Film<br>22 × 27 in<br>$3,500</p><button class="btn" data-art="Hal Trager, Geo Lilies #1 (HT07)">Inquire</button></article>
+<article class="work" style="--w:27"><img src="img/savas-42.jpg" alt="Hal Trager, Cafe Galaxy" width="900" height="819" loading="lazy"><h3>Cafe Galaxy</h3><p>Plastic Matte Film<br>22 × 27 in<br>$3,500</p><button class="btn" data-art="Hal Trager, Cafe Galaxy (HT06)">Inquire</button></article>
+<article class="work" style="--w:27"><img src="img/savas-43.jpg" alt="Hal Trager, Anto’s Sandbox" width="900" height="817" loading="lazy"><h3>Anto’s Sandbox</h3><p>Plastic Matte Film<br>22 × 27 in<br>$3,500</p><button class="btn" data-art="Hal Trager, Anto’s Sandbox (HT09)">Inquire</button></article>
+<article class="work" style="--w:27"><img src="img/savas-44.jpg" alt="Hal Trager, Deception" width="900" height="819" loading="lazy"><h3>Deception</h3><p>Plastic Matte Film<br>22 × 27 in<br>$3,500</p><button class="btn" data-art="Hal Trager, Deception (HT10)">Inquire</button></article>
+<article class="work" style="--w:27"><img src="img/savas-45.jpg" alt="Hal Trager, Social Industry" width="900" height="819" loading="lazy"><h3>Social Industry</h3><p>Plastic Matte Film<br>22 × 27 in<br>$3,500</p><button class="btn" data-art="Hal Trager, Social Industry (HT08)">Inquire</button></article></div></div></section>
+
+<section id="natalia" class="dark bio"><div class="wrap"><h2>Natalia Jona</h2><p>“Shapes dressed in feelings, feelings dressed in shapes” is how Natalia Jona’s work is often described. A London-based artist, she trained at the Władysław Strzemiński Academy of Fine Arts in Łódź, Poland, and later studied at Sotheby’s Institute of Art in New York.</p><p>Her paintings are abstractions of the human body, of landscapes and of the literature she loves, rendering natural forms in ways that are simple yet intensely moving. She works in ink with acrylic or oil on fine, nearly textureless unprimed linen, often leaving it exposed as the background. Patterns of small, repeated ink pen strokes give her compositions a hypnotic sense of movement.</p><p>Having lived and worked in many countries, she names her years in Japan as a major influence on her vision, alongside Matisse, Miró, Picabia, O’Keeffe, Kandinsky, Strzemiński and Hollowell.</p><p>Her work has been presented during Art Basel Miami in 2022, with live painting for the Ferrari Art Car Project; at Zona Maco in Mexico City; in solo exhibitions at Warsaw Gallery Weekend in 2020 and 2021; and in solo and group exhibitions in New York, Tokyo, Kyoto, Milan and Tuscany. She has been featured in Harper’s Bazaar UK, Vogue Polska and L’Officiel Hommes, and was named one of Larry’s List Top 5 Winners. Her paintings are held in private collections across Europe and the United States, including Miami.</p><p>Her work is presented to collectors through SAVAS Art House.</p></div></section>
+<section id="natalia-works" class="wall"><div class="wrap"><h3 style="margin-bottom:1rem">Selected works</h3><p>Dimensions, height × width.</p><div class="vgrid"><article class="work"><img src="img/savas-47.jpg" alt="Natalia Jona, Universe Rearranged" width="1200" height="965" loading="lazy"><h3>Universe Rearranged</h3><p>Acrylic paint and ink on linen<br>37½ × 47 in (95 × 120 cm)<br>Price Upon Request</p><button class="btn" data-art="Natalia Jona, Universe Rearranged">Inquire</button></article>
+<article class="work"><img src="img/savas-48.jpg" alt="Natalia Jona, Sometimes It’s Like That" width="921" height="1100" loading="lazy"><h3>Sometimes It’s Like That</h3><p>Genuine silver leaf, acrylic paint and ink on linen<br>67 × 55 in (170 × 140 cm)<br>Price Upon Request</p><button class="btn" data-art="Natalia Jona, Sometimes It’s Like That">Inquire</button></article>
+<article class="work"><img src="img/savas-49.jpg" alt="Natalia Jona, A" width="903" height="1100" loading="lazy"><h3>A</h3><p>Acrylic paint and ink on linen<br>33½ × 27½ in (85 × 70 cm)<br>Price Upon Request</p><button class="btn" data-art="Natalia Jona, A">Inquire</button></article>
+<article class="work"><img src="img/savas-50.jpg" alt="Natalia Jona, Forms Incubated" width="883" height="1100" loading="lazy"><h3>Forms Incubated</h3><p>Acrylic paint and ink on linen<br>19½ × 15½ in (50 × 40 cm)<br>Price Upon Request</p><button class="btn" data-art="Natalia Jona, Forms Incubated">Inquire</button></article>
+<article class="work"><img src="img/savas-51.jpg" alt="Natalia Jona, Handpicked Dreams" width="850" height="1100" loading="lazy"><h3>Handpicked Dreams</h3><p>Acrylic paint and ink on linen<br>21 × 16 in (53 × 41 cm)<br>Price Upon Request</p><button class="btn" data-art="Natalia Jona, Handpicked Dreams">Inquire</button></article>
+<article class="work"><img src="img/savas-52.jpg" alt="Natalia Jona, Relámpagos Vivos" width="1200" height="433" loading="lazy"><h3>Relámpagos Vivos</h3><p>Acrylic paint and ink on linen<br>27½ × 75 in (70 × 190 cm)<br>Mexico City 2021 / London 2025<br>Price Upon Request</p><button class="btn" data-art="Natalia Jona, Relámpagos Vivos">Inquire</button></article>
+<article class="work"><img src="img/savas-53.jpg" alt="Natalia Jona, Never Underestimate the Fortune Cookie" width="1200" height="770" loading="lazy"><h3>Never Underestimate the Fortune Cookie</h3><p>Acrylic paint and ink on linen<br>51 × 78½ in (130 × 200 cm)<br>Umbria, Italy, 2020<br>Price Upon Request</p><button class="btn" data-art="Natalia Jona, Never Underestimate the Fortune Cookie">Inquire</button></article>
+<article class="work"><img src="img/savas-54.jpg" alt="Natalia Jona, ほめ / Home" width="1170" height="692" loading="lazy"><h3>ほめ / Home</h3><p>Acrylic paint and ink on linen<br>34 × 55 in (86 × 140 cm)<br>Berlin, 2021<br>Price Upon Request</p><button class="btn" data-art="Natalia Jona, ほめ / Home">Inquire</button></article>
+<article class="work"><img src="img/savas-55.jpg" alt="Natalia Jona, No Blue Without the Sky" width="1200" height="396" loading="lazy"><h3>No Blue Without the Sky</h3><p>Acrylic paint and ink on linen<br>21 × 63 in (53 × 160 cm)<br>Tuscany, Italy, 2019<br>Price Upon Request</p><button class="btn" data-art="Natalia Jona, No Blue Without the Sky">Inquire</button></article>
+<article class="work"><img src="img/savas-56.jpg" alt="Natalia Jona, Berlin Summer Thoughts on Human Body and Who’s Made It Up So Interestingly Weird" width="1200" height="742" loading="lazy"><h3>Berlin Summer Thoughts on Human Body and Who’s Made It Up So Interestingly Weird</h3><p>Acrylic paint and ink on linen<br>43½ × 75 in (110 × 190 cm)<br>Berlin, 2021<br>Price Upon Request</p><button class="btn" data-art="Natalia Jona, Berlin Summer Thoughts on Human Body and Who’s Made It Up So Interestingly Weird">Inquire</button></article>
+<article class="work"><img src="img/savas-57.jpg" alt="Natalia Jona, The Map of Chaos" width="912" height="1100" loading="lazy"><h3>The Map of Chaos</h3><p>Acrylic paint and ink on linen<br>33½ × 27½ in (85 × 70 cm)<br>Price Upon Request</p><button class="btn" data-art="Natalia Jona, The Map of Chaos">Inquire</button></article>
+<article class="work"><img src="img/savas-58.jpg" alt="Natalia Jona, The Key" width="733" height="1100" loading="lazy"><h3>The Key</h3><p>Acrylic paint and ink on linen<br>35½ × 23½ in (90 × 60 cm)<br>Price Upon Request</p><button class="btn" data-art="Natalia Jona, The Key">Inquire</button></article>
+<article class="work"><img src="img/savas-59.jpg" alt="Natalia Jona, Milked" width="1100" height="1100" loading="lazy"><h3>Milked</h3><p>Acrylic paint and ink on linen<br>32½ × 32½ in (83 × 83 cm)<br>Poland, 2020<br>Price Upon Request</p><button class="btn" data-art="Natalia Jona, Milked">Inquire</button></article>
+<article class="work"><img src="img/savas-60.jpg" alt="Natalia Jona, The Curious Case of an Orange Dot, Study II" width="1200" height="579" loading="lazy"><h3>The Curious Case of an Orange Dot, Study II</h3><p>Acrylic paint and ink on linen<br>12 × 23½ in (30 × 60 cm)<br>Berlin, 2021<br>Price Upon Request</p><button class="btn" data-art="Natalia Jona, The Curious Case of an Orange Dot, Study II">Inquire</button></article>
+<article class="work"><img src="img/savas-61.jpg" alt="Natalia Jona, Remember When We Were Young?" width="917" height="1100" loading="lazy"><h3>Remember When We Were Young?</h3><p>Oil, ink and acrylic paint on Polish linen<br>47 × 39½ in (120 × 100 cm)<br>2023<br>Price Upon Request</p><button class="btn" data-art="Natalia Jona, Remember When We Were Young?">Inquire</button></article>
+<article class="work"><img src="img/savas-62.jpg" alt="Natalia Jona, The Dot Connector" width="1200" height="1071" loading="lazy"><h3>The Dot Connector</h3><p>Acrylic paint on canvas<br>51 × 63 in (130 × 160 cm)<br>2022<br>Price Upon Request</p><button class="btn" data-art="Natalia Jona, The Dot Connector">Inquire</button></article>
+<article class="work"><img src="img/savas-63.jpg" alt="Natalia Jona, The Dots Connectors" width="1200" height="631" loading="lazy"><h3>The Dots Connectors</h3><p>Acrylic paint on canvas<br>Approx. 78½ × 147½ in (200 × 375 cm)<br>2023<br>Price Upon Request</p><button class="btn" data-art="Natalia Jona, The Dots Connectors">Inquire</button></article>
+<article class="work"><img src="img/savas-64.jpg" alt="Natalia Jona, Aren’t We All a Little Bit Lost?" width="1200" height="367" loading="lazy"><h3>Aren’t We All a Little Bit Lost?</h3><p>Acrylic paint on canvas<br>Approx. 63 × 208 in (160 × 528 cm)<br>2023<br>Price Upon Request</p><button class="btn" data-art="Natalia Jona, Aren’t We All a Little Bit Lost?">Inquire</button></article>
+<article class="work"><img src="img/savas-65.jpg" alt="Natalia Jona, Mountain Valley Squeeze and Twist" width="1200" height="589" loading="lazy"><h3>Mountain Valley Squeeze and Twist</h3><p>Acrylic paint on stretched canvas, diptych<br>47½ × 100 in (121 × 254 cm)<br>New York City, 2018<br>Price Upon Request</p><button class="btn" data-art="Natalia Jona, Mountain Valley Squeeze and Twist">Inquire</button></article></div></div></section>
+
+<section id="juan" class="dark bio"><div class="wrap"><h2>Juan Fernando Cobo Agudelo</h2><p>Juan Fernando Cobo Agudelo is a Colombian painter, sculptor and cultural promoter who carries the light of the Colombian tropics into a body of work that resists easy classification.</p><p>Over more than forty-five years, working in studios on three continents, he has painted with equal mastery in oil, acrylic and pastel, moving between the figurative and the abstract without losing his singular vision. He trained in Cali, Madrid and New York.</p><p>His work is presented to collectors through SAVAS Art House.</p></div></section>
+<section id="juan-works" class="wall"><div class="wrap"><h3 style="margin-bottom:1rem">Selected works</h3><div class="vgrid"><article class="work"><img src="img/savas-66.jpg" alt="Juan Fernando Cobo Agudelo, work 1 (title to be confirmed)" width="800" height="850" loading="lazy"><h3>Title to be confirmed</h3><p>Painting; dimensions to be confirmed<br>Price Upon Request</p><button class="btn" data-art="Juan Fernando Cobo Agudelo, work 1 (title to be confirmed)">Inquire</button></article>
+<article class="work"><img src="img/savas-67.jpg" alt="Juan Fernando Cobo Agudelo, work 2 (title to be confirmed)" width="410" height="500" loading="lazy"><h3>Title to be confirmed</h3><p>Painting; dimensions to be confirmed<br>Price Upon Request</p><button class="btn" data-art="Juan Fernando Cobo Agudelo, work 2 (title to be confirmed)">Inquire</button></article>
+<article class="work"><img src="img/savas-68.jpg" alt="Juan Fernando Cobo Agudelo, work 3 (title to be confirmed)" width="375" height="350" loading="lazy"><h3>Title to be confirmed</h3><p>Painting; dimensions to be confirmed<br>Price Upon Request</p><button class="btn" data-art="Juan Fernando Cobo Agudelo, work 3 (title to be confirmed)">Inquire</button></article></div></div></section>
+<section id="santiago" class="dark bio"><div class="wrap"><h2>Santiago Betancur</h2><p>Santiago Betancur, born in 1967, is a Colombian Master of Fine Arts based in Miami. Inspired by the horse as one of the most noble and emblematic figures in history, his work explores the profound relationship between humans and animals.</p><p>He reinterprets classical imagery in a distinctive Neo-Renaissance style that combines abstraction, rich textures and contemporary expression. He has exhibited in galleries and museums in France, Poland, Spain, Colombia and Miami.</p><p>His work is presented to collectors through SAVAS Art House.</p></div></section>
+<section id="santiago-works" class="wall"><div class="wrap"><h3 style="margin-bottom:1rem">Selected works</h3><div class="vgrid"><article class="work"><img src="img/savas-69.jpg" alt="Santiago Betancur, work 1 (title to be confirmed)" width="805" height="940" loading="lazy"><h3>Title to be confirmed</h3><p>Painting; dimensions to be confirmed<br>Price Upon Request</p><button class="btn" data-art="Santiago Betancur, work 1 (title to be confirmed)">Inquire</button></article>
+<article class="work"><img src="img/savas-70.jpg" alt="Santiago Betancur, work 2 (title to be confirmed)" width="340" height="460" loading="lazy"><h3>Title to be confirmed</h3><p>Painting; dimensions to be confirmed<br>Price Upon Request</p><button class="btn" data-art="Santiago Betancur, work 2 (title to be confirmed)">Inquire</button></article>
+<article class="work"><img src="img/savas-71.jpg" alt="Santiago Betancur, work 3 (title to be confirmed)" width="440" height="530" loading="lazy"><h3>Title to be confirmed</h3><p>Painting; dimensions to be confirmed<br>Price Upon Request</p><button class="btn" data-art="Santiago Betancur, work 3 (title to be confirmed)">Inquire</button></article></div></div></section>
+
+<section id="exhibitions"><div class="wrap">
+<span class="tag">Now showing · November 2026</span>
+<h2>Patrice Bertin and Hal Trager at EPIC Residences, Miami</h2>
+<p>Twenty-four works installed across the lobby and corridors of EPIC Residences: Patrice Bertin’s geometric paintings and Hal Trager’s hand-drawn optical works. Each label carries a QR code that opens the work here, with its details and price.</p>
+<div class="exgal">
+<img src="img/savas-72.jpg" alt="Lobby of EPIC Residences with a water feature and tropical flowers, two geometric paintings by Patrice Bertin on the wall behind" width="1400" height="933" loading="lazy">
+<img src="img/savas-73.jpg" alt="A Place Beyond Time by Patrice Bertin, a large pastel geometric painting beside a dark wood column" width="1240" height="1048" loading="lazy">
+<img src="img/savas-74.jpg" alt="Alcove with a marble bench and pendant lights, with Standing Tall and Colourful Moments by Patrice Bertin" width="1375" height="1100" loading="lazy">
+<img src="img/savas-75.jpg" alt="To the Point by Patrice Bertin, a diamond-hung geometric painting in blue, grey, red and yellow" width="1400" height="1082" loading="lazy">
+<img src="img/savas-76.jpg" alt="Corridor lined with framed hand-drawn works by Hal Trager on wood panelling" width="1400" height="1008" loading="lazy">
+<img src="img/savas-77.jpg" alt="Five framed hand-drawn optical works by Hal Trager on a wood-panelled wall" width="1400" height="933" loading="lazy">
+</div>
+<a class="lnk" href="#patrice-works">Patrice Bertin: works on show</a> <a class="lnk" href="#hal-works">Hal Trager: works on show</a>
+<div class="exnext"><span class="tag">Forthcoming, February 2027</span>
+<h3>Vilmantas and Indra</h3>
+<p>An anticipated exhibition featuring Vilmantas Marcinkevičius and Indra Marcinkevičienė. Venue, dates and details will be announced once confirmed.</p>
+<p>SAVAS has no permanent gallery. Exhibitions take place in distinctive venues and private spaces.</p></div>
+</div></section>
+
+<section id="advisory" class="alt"><div class="wrap">
+<h2>What SAVAS offers</h2>
+<div class="services">
+<div><h3>Art Advisory</h3><p>Art acquisition and advisory, private collection development, artwork sourcing, corporate and hospitality placements, and collector introductions.</p></div>
+<div id="staging"><h3>Luxury Property Staging</h3><p>Artwork selection and placement for luxury residential properties, in collaboration with developers, real estate professionals, interior designers and architects.</p></div>
+<div><h3>Cultural Experiences</h3><p>Curated events, exhibitions, private viewings and creative partnerships.</p></div>
+</div></div></section>
+
+<section id="about"><div class="wrap">
+<h2>About SAVAS Art House</h2>
+<span class="tag">Artists. Exhibitions. Collectors.</span>
+<p>SAVAS Art House is an independent, Miami-based international art and cultural platform dedicated to connecting exceptional artists with collectors, distinctive spaces and new audiences worldwide.</p>
+<p>With strong ties across the United Kingdom, Europe, Asia and the Middle East, SAVAS brings a global perspective to artist representation, curated exhibitions, art advisory and creative collaborations.</p>
+<p>Operating beyond the traditional gallery model, SAVAS creates opportunities for art to be experienced and acquired in inspiring environments, from luxury residences and hospitality destinations to private collections and exclusive cultural events.</p>
+<p>Our work extends to art acquisitions, bespoke placements, luxury property staging and partnerships with interior designers, architects and developers, creating meaningful connections between art, design and contemporary living.</p>
+<p>At its heart, SAVAS Art House believes that art should transcend conventional spaces, inspire dialogue and create lasting connections between artists, collectors and communities.</p>
+<p>Founder: Vytau Savickas.</p>
+</div></section>
+
+<section id="contact" class="dark"><div class="wrap">
+<h2>Contact</h2>
+<p>For artwork acquisitions, artist inquiries, private collectors, interior designers, exhibition partnerships and corporate collaborations.</p>
+<form id="f">
+<label>Name<input name="name" required autocomplete="name"></label>
+<label>Email<input name="email" type="email" required autocomplete="email"></label>
+<label>I am writing about
+<select name="topic"><option>Artwork acquisition</option><option>Artist inquiry</option><option>Private collector</option><option>Interior design or architecture</option><option>Exhibition partnership</option><option>Corporate collaboration</option></select></label>
+<label>Artwork of interest<input id="art" name="artwork" placeholder="Optional"></label>
+<label>Message<textarea name="message" rows="4"></textarea></label>
+<div><button class="cta" type="submit" style="margin-top:0">Send inquiry</button></div>
+<p id="msg" role="status"></p>
+</form>
+<p class="direct">Email <a href="mailto:vs-bms@outlook.com">vs-bms@outlook.com</a><br>Phone <a href="tel:+17866522452">+1 786 652 2452</a><br>WhatsApp <a href="https://wa.me/447701050004" target="_blank" rel="noopener">+44 7701 050004</a><br>Instagram <a href="https://www.instagram.com/savasarthouse/" target="_blank" rel="noopener">@savasarthouse</a></p>
+</div></section>
+</main>
+<footer><div class="wrap"><img id="flogo" alt="SAVAS Art House" width="680" height="372"><span>SAVAS Art House, Miami, Florida &nbsp;|&nbsp; savasarthouse.com</span></div></footer>
+
+<script>
+document.getElementById("flogo").src=document.querySelector(".logo img").src;
+document.querySelectorAll('.work .btn').forEach(function(b){
+  b.addEventListener('click',function(){
+    document.getElementById('art').value=b.dataset.art;
+    document.getElementById('contact').scrollIntoView({behavior:'smooth'});
+    document.getElementById('art').focus({preventScroll:true});
+  });
+});
+document.getElementById('f').addEventListener('submit',function(e){
+  e.preventDefault();
+  var d=new FormData(e.target),t=d.get('topic'),a=d.get('artwork');var b='Name: '+d.get('name')+'\nEmail: '+d.get('email')+'\nTopic: '+t+'\nArtwork: '+(a||'-')+'\n\n'+(d.get('message')||'');location.href='mailto:vs-bms@outlook.com?subject='+encodeURIComponent('SAVAS inquiry: '+t+(a?' / '+a:''))+'&body='+encodeURIComponent(b);document.getElementById('msg').textContent='Your email app should now open with your inquiry ready to send. If it does not, please write to vs-bms@outlook.com.';
+});
+</script>
+<script>
+(function(){
+var A={vilmantas:'Vilmantas Marcinkevi\u010dius',indra:'Indra Marcinkevi\u010dien\u0117',patrice:'Patrice Bertin',hal:'Hal Trager',natalia:'Natalia Jona',juan:'Juan Fernando Cobo Agudelo',santiago:'Santiago Betancur'};
+var base=document.title;
+Object.keys(A).forEach(function(k){
+  var bio=document.getElementById(k),w=document.getElementById(k+'-works');
+  if(!bio||!w)return;
+  bio.dataset.view=k;w.dataset.view=k;
+  var card=null;
+  document.querySelectorAll('.artist').forEach(function(c){var h=c.querySelector('h3');if(h&&h.textContent.trim()===A[k])card=c;});
+  var wrap=bio.querySelector('.wrap');
+  var text=document.createElement('div');
+  while(wrap.firstChild)text.appendChild(wrap.firstChild);
+  var back=document.createElement('a');back.className='back';back.href='#artists';back.textContent='\u2190 All artists';
+  text.insertBefore(back,text.firstChild);
+  var pic=document.createElement('div');
+  if(card){
+    var p=card.querySelector('.portrait,.ph');if(p)pic.appendChild(p.cloneNode(true));
+    var h3=card.querySelector('h3'),a=document.createElement('a');a.href='#'+k;a.textContent=h3.textContent;h3.textContent='';h3.appendChild(a);
+    var im=card.querySelector('.portrait');if(im)im.addEventListener('click',function(){location.hash=k;});
+  }
+  wrap.classList.add('bio-grid');wrap.appendChild(pic);wrap.appendChild(text);
+});
+var homeOnly=[document.querySelector('.hero')].concat(['artists','exhibitions','advisory','about'].map(function(i){return document.getElementById(i);}));
+var view='home';
+function route(){
+  var h=location.hash.slice(1),k=h.replace(/-works$/,'');
+  if(A[k])view=k;else if(h!=='contact')view='home';
+  document.body.dataset.view=view;
+  document.querySelectorAll('section[data-view]').forEach(function(s){s.hidden=s.dataset.view!==view;});
+  homeOnly.forEach(function(e){if(e)e.hidden=view!=='home';});
+  document.title=view==='home'?base:A[view]+' | SAVAS Art House';
+  var el=h?document.getElementById(h):null;
+  if(!h||A[h])window.scrollTo(0,0);else if(el)el.scrollIntoView();
+}
+window.addEventListener('hashchange',route);route();
+})();
+</script>
+</body>
+</html>
