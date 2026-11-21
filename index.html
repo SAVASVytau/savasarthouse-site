@@ -323,6 +323,7 @@ body[data-view]:not([data-view="home"]) .bio{padding-top:300px}
 <select name="topic"><option>Artwork acquisition</option><option>Commission or collaboration</option><option>Artist inquiry</option><option>Private collector</option><option>Interior design or architecture</option><option>Exhibition partnership</option><option>Corporate collaboration</option></select></label>
 <label>Artwork of interest<input id="art" name="artwork" placeholder="Optional"></label>
 <label>Message<textarea name="message" rows="4"></textarea></label>
+<div style="position:absolute;left:-5000px" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
 <div><button class="cta" type="submit" style="margin-top:0">Send inquiry</button></div>
 <p id="msg" role="status"></p>
 </form>
@@ -343,7 +344,15 @@ document.querySelectorAll('.work .btn').forEach(function(b){
 document.querySelectorAll('.more .btn,.commission .btn').forEach(function(b){b.addEventListener('click',function(){var a=document.getElementById('art');a.value=b.dataset.art||'';var t=document.querySelector('#f select[name=topic]');if(t)t.value=b.dataset.topic;document.getElementById('contact').scrollIntoView({behavior:'smooth'});});});
 document.getElementById('f').addEventListener('submit',function(e){
   e.preventDefault();
-  var d=new FormData(e.target),t=d.get('topic'),a=d.get('artwork');var b='Name: '+d.get('name')+'\nEmail: '+d.get('email')+'\nTopic: '+t+'\nArtwork: '+(a||'-')+'\n\n'+(d.get('message')||'');location.href='mailto:vs-bms@outlook.com?subject='+encodeURIComponent('SAVAS inquiry: '+t+(a?' / '+a:''))+'&body='+encodeURIComponent(b);document.getElementById('msg').textContent='Your email app should now open with your inquiry ready to send. If it does not, please write to vs-bms@outlook.com.';
+  var f=e.target,m=document.getElementById('msg'),btn=f.querySelector('button[type=submit]');
+  var d=new FormData(f),t=d.get('topic'),a=d.get('artwork');
+  function viaEmail(){var b='Name: '+d.get('name')+'\nEmail: '+d.get('email')+'\nTopic: '+t+'\nArtwork: '+(a||'-')+'\n\n'+(d.get('message')||'');location.href='mailto:vs-bms@outlook.com?subject='+encodeURIComponent('SAVAS inquiry: '+t+(a?' / '+a:''))+'&body='+encodeURIComponent(b);m.textContent='Your email app should now open with your inquiry ready to send. If it does not, please write to vs-bms@outlook.com.';}
+  btn.disabled=true;btn.textContent='Sending\u2026';m.textContent='';
+  fetch('/api/inquiry',{method:'POST',body:d}).then(function(r){return r.json().then(function(j){return r.ok&&j.ok;});}).catch(function(){return false;}).then(function(ok){
+    btn.disabled=false;btn.textContent='Send inquiry';
+    if(ok){f.reset();m.textContent='Thank you. Your inquiry has been sent and we will be in touch shortly.';}
+    else{viaEmail();}
+  });
 });
 </script>
 <script>

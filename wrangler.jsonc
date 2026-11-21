@@ -1,9 +1,14 @@
 {
-  // Cloudflare Workers static site for savasarthouse.com
+  // Cloudflare Worker for savasarthouse.com: static site + contact-form email
   "name": "savasarthouse-site",
+  "main": "worker.js",
   "compatibility_date": "2026-11-01",
   "assets": {
     "directory": "./",
+    "binding": "ASSETS",
     "html_handling": "auto-trailing-slash"
-  }
+  },
+  "send_email": [
+    { "name": "INQUIRY", "destination_address": "vs-bms@outlook.com" }
+  ]
 }
