@@ -1,0 +1,9 @@
+{
+  // Cloudflare Workers static site for savasarthouse.com
+  "name": "savasarthouse-site",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./",
+    "html_handling": "auto-trailing-slash"
+  }
+}
