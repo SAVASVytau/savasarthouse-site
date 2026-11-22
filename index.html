@@ -89,9 +89,9 @@ section{padding:110px 0}
 .exh .ph{aspect-ratio:16/10}
 .more{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px 32px;margin-top:3rem;padding:30px 34px 30px 40px;position:relative;background:#121211;border:0;box-shadow:0 10px 28px rgba(40,30,20,.18)}.more::before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:linear-gradient(180deg,#d9b96f,#b08d43)}.more p{margin:0;max-width:62ch;color:#bdb8ad}.more strong{display:block;margin-bottom:.35rem;color:#f4f1ea;font:500 1.45rem/1.2 var(--serif)}.more .btn{background:#c9a85c;border-color:#c9a85c;color:#121211;font-weight:600;padding:13px 24px}.more .btn:hover{background:#ecd08f;border-color:#ecd08f;color:#121211}
 .commission{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px 40px;margin-top:3rem;padding:34px;border:1px solid var(--gold)}.commission h3{margin:.5rem 0 .8rem}.commission p{margin:0}
-.services{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:2.5rem;border-top:1px solid var(--line)}
+.services{display:grid;grid-template-columns:repeat(2,1fr);gap:0;margin-top:2.5rem;border-top:1px solid var(--line)}
 .services div{padding:28px 28px 28px 0}
-.services div+div{padding-left:28px;border-left:1px solid var(--line)}
+.services div{border-bottom:1px solid var(--line)}.services div:nth-child(even){padding-left:28px;border-left:1px solid var(--line)}
 .dark{background:var(--black);color:var(--onblack)}
 .dark p{color:#bdb8ad}
 form{display:grid;gap:18px;max-width:640px;margin-top:2rem}
@@ -106,7 +106,7 @@ footer .wrap{display:flex;flex-direction:column;align-items:center;text-align:ce
 footer img{height:64px;width:auto}
 @media (max-width:1000px){.scaled{--k:4.6px}.hgrid{grid-template-columns:repeat(3,1fr)}.artists{grid-template-columns:1fr 1fr}.pworks{column-count:2}}
 @media (max-width:820px){.scaled{--k:3.6px;gap:44px 28px}.pworks{column-count:1}.hgrid{grid-template-columns:1fr 1fr}.artist{max-width:340px}.logo img{height:116px}.hero-grid,.artists,.exh,.services,.works{grid-template-columns:1fr}
-.services div+div{padding-left:0;border-left:0;border-top:1px solid var(--line)}
+.services div+div{padding-left:0;border-left:0;border-top:1px solid var(--line)}.services div:nth-child(even){padding-left:0;border-left:0}.services div{border-bottom:0}
 header .wrap{gap:10px}nav{justify-content:center;gap:10px 18px}
 .hero{padding-top:330px}section{padding:76px 0}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
@@ -281,7 +281,8 @@ body[data-view]:not([data-view="home"]) .bio{padding-top:300px}
 <h2>What SAVAS offers</h2>
 <div class="services">
 <div><h3>Art Advisory</h3><p>Art acquisition and advisory, private collection development, artwork sourcing and collector introductions.</p></div>
-<div id="staging"><h3>Art for Residences, Hotels &amp; Yachts</h3><p>Artwork selection and placement for luxury residences, hotels and yachts, in collaboration with developers, interior designers, architects and real estate professionals. For selected partners, works are available on consignment.</p></div>
+<div id="staging"><h3>Luxury Property Staging</h3><p>Art staging for luxury properties on the market, in collaboration with developers, real estate agents and interior designers. We curate and install works that bring a home to life for viewings, and buyers can acquire the art with the property.</p></div>
+<div id="placements"><h3>Art for Residences, Hotels &amp; Yachts</h3><p>Artwork selection and placement for luxury residences, hotels and yachts, in collaboration with developers, interior designers, architects and real estate professionals. For selected partners, works are available on consignment.</p></div>
 <div><h3>Cultural Experiences</h3><p>Curated exhibitions, private viewings, art fair presentations, gallery collaborations and creative partnerships.</p></div>
 </div><div class="commission" id="commissions"><div><span class="tag">Commissions &amp; collaborations</span><h3>Looking for something specific?</h3><p>Our artists have more works available than we show here. We also arrange commissioned pieces, made for your space, collection or project, and collaborations with brands, hotels, developers, interior designers and architects.</p></div><button class="btn" data-topic="Commission or collaboration" data-art="">Start a conversation</button></div></div></section>
 
